@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0BC603D2799B6F7007A411C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC603C2799B6F7007A411C /* AppDelegate.swift */; };
+		B0BC603F2799B6F7007A411C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC603E2799B6F7007A411C /* SceneDelegate.swift */; };
+		B0BC60412799B6F7007A411C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60402799B6F7007A411C /* LandingViewController.swift */; };
+		B0BC60442799B6F7007A411C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BC60422799B6F7007A411C /* Main.storyboard */; };
+		B0BC60462799B6FC007A411C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BC60452799B6FC007A411C /* Assets.xcassets */; };
+		B0BC60492799B6FC007A411C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BC60472799B6FC007A411C /* LaunchScreen.storyboard */; };
+		B0BC60542799B6FC007A411C /* LLyodsBankDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60532799B6FC007A411C /* LLyodsBankDemoTests.swift */; };
+		B0BC605E2799B6FC007A411C /* LLyodsBankDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC605D2799B6FC007A411C /* LLyodsBankDemoUITests.swift */; };
+		B0BC60602799B6FC007A411C /* LLyodsBankDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC605F2799B6FC007A411C /* LLyodsBankDemoUITestsLaunchTests.swift */; };
+		B0BC606E2799B752007A411C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0BC606D2799B752007A411C /* Alamofire */; };
+		B0BC60712799B818007A411C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60702799B818007A411C /* NewsTableViewCell.swift */; };
+		B0BC60742799B994007A411C /* NewsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60732799B993007A411C /* NewsResult.swift */; };
+		B0BC60762799B9D9007A411C /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60752799B9D9007A411C /* Articles.swift */; };
+		B0BC60782799B9EE007A411C /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60772799B9EE007A411C /* Source.swift */; };
+		B0BC607B2799BA51007A411C /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC607A2799BA51007A411C /* URLConstants.swift */; };
+		B0BC607E2799BAA0007A411C /* NewsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC607D2799BAA0007A411C /* NewsAPIService.swift */; };
+		B0BC60812799DC3A007A411C /* LlyodsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC60802799DC3A007A411C /* LlyodsExtension.swift */; };
+		B0BC6084279A80BE007A411C /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC6083279A80BE007A411C /* HTTPManager.swift */; };
+		B0BC6086279A843A007A411C /* TextConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC6085279A843A007A411C /* TextConstant.swift */; };
+		B0BC6088279A9160007A411C /* TestingData.json in Resources */ = {isa = PBXBuildFile; fileRef = B0BC6087279A9160007A411C /* TestingData.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0BC60502799B6FC007A411C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0BC60312799B6F7007A411C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BC60382799B6F7007A411C;
+			remoteInfo = LLyodsBankDemo;
+		};
+		B0BC605A2799B6FC007A411C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0BC60312799B6F7007A411C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BC60382799B6F7007A411C;
+			remoteInfo = LLyodsBankDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0BC60392799B6F7007A411C /* LLyodsBankDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLyodsBankDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BC603C2799B6F7007A411C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0BC603E2799B6F7007A411C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B0BC60402799B6F7007A411C /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		B0BC60432799B6F7007A411C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0BC60452799B6FC007A411C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0BC60482799B6FC007A411C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0BC604A2799B6FC007A411C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BC604F2799B6FC007A411C /* LLyodsBankDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLyodsBankDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BC60532799B6FC007A411C /* LLyodsBankDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLyodsBankDemoTests.swift; sourceTree = "<group>"; };
+		B0BC60592799B6FC007A411C /* LLyodsBankDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLyodsBankDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BC605D2799B6FC007A411C /* LLyodsBankDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLyodsBankDemoUITests.swift; sourceTree = "<group>"; };
+		B0BC605F2799B6FC007A411C /* LLyodsBankDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLyodsBankDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0BC60702799B818007A411C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		B0BC60732799B993007A411C /* NewsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResult.swift; sourceTree = "<group>"; };
+		B0BC60752799B9D9007A411C /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		B0BC60772799B9EE007A411C /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		B0BC607A2799BA51007A411C /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		B0BC607D2799BAA0007A411C /* NewsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIService.swift; sourceTree = "<group>"; };
+		B0BC60802799DC3A007A411C /* LlyodsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlyodsExtension.swift; sourceTree = "<group>"; };
+		B0BC6083279A80BE007A411C /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		B0BC6085279A843A007A411C /* TextConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstant.swift; sourceTree = "<group>"; };
+		B0BC6087279A9160007A411C /* TestingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestingData.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0BC60362799B6F7007A411C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC606E2799B752007A411C /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC604C2799B6FC007A411C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC60562799B6FC007A411C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0BC60302799B6F7007A411C = {
+			isa = PBXGroup;
+			children = (
+				B0BC603B2799B6F7007A411C /* LLyodsBankDemo */,
+				B0BC60522799B6FC007A411C /* LLyodsBankDemoTests */,
+				B0BC605C2799B6FC007A411C /* LLyodsBankDemoUITests */,
+				B0BC603A2799B6F7007A411C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0BC603A2799B6F7007A411C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC60392799B6F7007A411C /* LLyodsBankDemo.app */,
+				B0BC604F2799B6FC007A411C /* LLyodsBankDemoTests.xctest */,
+				B0BC60592799B6FC007A411C /* LLyodsBankDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0BC603B2799B6F7007A411C /* LLyodsBankDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC603C2799B6F7007A411C /* AppDelegate.swift */,
+				B0BC603E2799B6F7007A411C /* SceneDelegate.swift */,
+				B0BC6082279A80A8007A411C /* Services */,
+				B0BC607F2799DC12007A411C /* Others */,
+				B0BC60792799BA2F007A411C /* Utilities */,
+				B0BC606F2799B800007A411C /* Views */,
+				B0BC60722799B97F007A411C /* Model */,
+				B0BC607C2799BA76007A411C /* ViewModel */,
+				B0BC60422799B6F7007A411C /* Main.storyboard */,
+				B0BC60452799B6FC007A411C /* Assets.xcassets */,
+				B0BC60472799B6FC007A411C /* LaunchScreen.storyboard */,
+				B0BC604A2799B6FC007A411C /* Info.plist */,
+			);
+			path = LLyodsBankDemo;
+			sourceTree = "<group>";
+		};
+		B0BC60522799B6FC007A411C /* LLyodsBankDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC6087279A9160007A411C /* TestingData.json */,
+				B0BC60532799B6FC007A411C /* LLyodsBankDemoTests.swift */,
+			);
+			path = LLyodsBankDemoTests;
+			sourceTree = "<group>";
+		};
+		B0BC605C2799B6FC007A411C /* LLyodsBankDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC605D2799B6FC007A411C /* LLyodsBankDemoUITests.swift */,
+				B0BC605F2799B6FC007A411C /* LLyodsBankDemoUITestsLaunchTests.swift */,
+			);
+			path = LLyodsBankDemoUITests;
+			sourceTree = "<group>";
+		};
+		B0BC606F2799B800007A411C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC60702799B818007A411C /* NewsTableViewCell.swift */,
+				B0BC60402799B6F7007A411C /* LandingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0BC60722799B97F007A411C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC60732799B993007A411C /* NewsResult.swift */,
+				B0BC60752799B9D9007A411C /* Articles.swift */,
+				B0BC60772799B9EE007A411C /* Source.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0BC60792799BA2F007A411C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC607A2799BA51007A411C /* URLConstants.swift */,
+				B0BC6085279A843A007A411C /* TextConstant.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B0BC607C2799BA76007A411C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC607D2799BAA0007A411C /* NewsAPIService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B0BC607F2799DC12007A411C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC60802799DC3A007A411C /* LlyodsExtension.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		B0BC6082279A80A8007A411C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC6083279A80BE007A411C /* HTTPManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0BC60382799B6F7007A411C /* LLyodsBankDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BC60632799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemo" */;
+			buildPhases = (
+				B0BC60352799B6F7007A411C /* Sources */,
+				B0BC60362799B6F7007A411C /* Frameworks */,
+				B0BC60372799B6F7007A411C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLyodsBankDemo;
+			packageProductDependencies = (
+				B0BC606D2799B752007A411C /* Alamofire */,
+			);
+			productName = LLyodsBankDemo;
+			productReference = B0BC60392799B6F7007A411C /* LLyodsBankDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0BC604E2799B6FC007A411C /* LLyodsBankDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BC60662799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemoTests" */;
+			buildPhases = (
+				B0BC604B2799B6FC007A411C /* Sources */,
+				B0BC604C2799B6FC007A411C /* Frameworks */,
+				B0BC604D2799B6FC007A411C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0BC60512799B6FC007A411C /* PBXTargetDependency */,
+			);
+			name = LLyodsBankDemoTests;
+			productName = LLyodsBankDemoTests;
+			productReference = B0BC604F2799B6FC007A411C /* LLyodsBankDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0BC60582799B6FC007A411C /* LLyodsBankDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BC60692799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemoUITests" */;
+			buildPhases = (
+				B0BC60552799B6FC007A411C /* Sources */,
+				B0BC60562799B6FC007A411C /* Frameworks */,
+				B0BC60572799B6FC007A411C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0BC605B2799B6FC007A411C /* PBXTargetDependency */,
+			);
+			name = LLyodsBankDemoUITests;
+			productName = LLyodsBankDemoUITests;
+			productReference = B0BC60592799B6FC007A411C /* LLyodsBankDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0BC60312799B6F7007A411C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					B0BC60382799B6F7007A411C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					B0BC604E2799B6FC007A411C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B0BC60382799B6F7007A411C;
+					};
+					B0BC60582799B6FC007A411C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B0BC60382799B6F7007A411C;
+					};
+				};
+			};
+			buildConfigurationList = B0BC60342799B6F7007A411C /* Build configuration list for PBXProject "LLyodsBankDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0BC60302799B6F7007A411C;
+			packageReferences = (
+				B0BC606C2799B752007A411C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = B0BC603A2799B6F7007A411C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0BC60382799B6F7007A411C /* LLyodsBankDemo */,
+				B0BC604E2799B6FC007A411C /* LLyodsBankDemoTests */,
+				B0BC60582799B6FC007A411C /* LLyodsBankDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0BC60372799B6F7007A411C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC60492799B6FC007A411C /* LaunchScreen.storyboard in Resources */,
+				B0BC60462799B6FC007A411C /* Assets.xcassets in Resources */,
+				B0BC60442799B6F7007A411C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC604D2799B6FC007A411C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC6088279A9160007A411C /* TestingData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC60572799B6FC007A411C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0BC60352799B6F7007A411C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC6086279A843A007A411C /* TextConstant.swift in Sources */,
+				B0BC60412799B6F7007A411C /* LandingViewController.swift in Sources */,
+				B0BC603D2799B6F7007A411C /* AppDelegate.swift in Sources */,
+				B0BC60742799B994007A411C /* NewsResult.swift in Sources */,
+				B0BC60782799B9EE007A411C /* Source.swift in Sources */,
+				B0BC60712799B818007A411C /* NewsTableViewCell.swift in Sources */,
+				B0BC607B2799BA51007A411C /* URLConstants.swift in Sources */,
+				B0BC60762799B9D9007A411C /* Articles.swift in Sources */,
+				B0BC607E2799BAA0007A411C /* NewsAPIService.swift in Sources */,
+				B0BC6084279A80BE007A411C /* HTTPManager.swift in Sources */,
+				B0BC60812799DC3A007A411C /* LlyodsExtension.swift in Sources */,
+				B0BC603F2799B6F7007A411C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC604B2799B6FC007A411C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC60542799B6FC007A411C /* LLyodsBankDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BC60552799B6FC007A411C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BC60602799B6FC007A411C /* LLyodsBankDemoUITestsLaunchTests.swift in Sources */,
+				B0BC605E2799B6FC007A411C /* LLyodsBankDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0BC60512799B6FC007A411C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0BC60382799B6F7007A411C /* LLyodsBankDemo */;
+			targetProxy = B0BC60502799B6FC007A411C /* PBXContainerItemProxy */;
+		};
+		B0BC605B2799B6FC007A411C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0BC60382799B6F7007A411C /* LLyodsBankDemo */;
+			targetProxy = B0BC605A2799B6FC007A411C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0BC60422799B6F7007A411C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BC60432799B6F7007A411C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0BC60472799B6FC007A411C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BC60482799B6FC007A411C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0BC60612799B6FC007A411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0BC60622799B6FC007A411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0BC60642799B6FC007A411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LLyodsBankDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0BC60652799B6FC007A411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LLyodsBankDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0BC60672799B6FC007A411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLyodsBankDemo.app/LLyodsBankDemo";
+			};
+			name = Debug;
+		};
+		B0BC60682799B6FC007A411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLyodsBankDemo.app/LLyodsBankDemo";
+			};
+			name = Release;
+		};
+		B0BC606A2799B6FC007A411C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLyodsBankDemo;
+			};
+			name = Debug;
+		};
+		B0BC606B2799B6FC007A411C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XB96NTY3P3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.in.LLyodsBankDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLyodsBankDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0BC60342799B6F7007A411C /* Build configuration list for PBXProject "LLyodsBankDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BC60612799B6FC007A411C /* Debug */,
+				B0BC60622799B6FC007A411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BC60632799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BC60642799B6FC007A411C /* Debug */,
+				B0BC60652799B6FC007A411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BC60662799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BC60672799B6FC007A411C /* Debug */,
+				B0BC60682799B6FC007A411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BC60692799B6FC007A411C /* Build configuration list for PBXNativeTarget "LLyodsBankDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BC606A2799B6FC007A411C /* Debug */,
+				B0BC606B2799B6FC007A411C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0BC606C2799B752007A411C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0BC606D2799B752007A411C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BC606C2799B752007A411C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B0BC60312799B6F7007A411C /* Project object */;
+}

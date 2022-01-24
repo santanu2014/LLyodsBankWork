@@ -1,7 +1,6 @@
-
 Application Overview
 
-iOS application that displays “Weather Forecasting”.
+iOS application that displays “News App”.
 
 Code Structure Overview
 
@@ -10,24 +9,17 @@ Code Structure Overview
 
 Compatibility
 
-This project is written in Swift 4.1 and requires Xcode 10.2 to build and run.
+This project is written in Swift 5.0 and requires Xcode 13.1 to build and run.
 
 Cloning an existing repository in  Desktop
 
 cd ~/Desktop
-  git clone https://github.com/santanu2014/AIBTask.git
-
-
-Install Pods
-
-$ cd WeatherApp
-
-$ pod install
+  git clone https://github.com/santanu2014/LLyodsBankWork.git
 
 Open the workspace in Xcode
 
 
-$ open "WeatherApp.xcworkspace"
+$ open "LLyodsBankDemo.xcodeproj"
 
 
 Todo:
@@ -39,5 +31,6 @@ Todo:
 3. UI improvement
 
 4. Code restructuring 
+
 
 

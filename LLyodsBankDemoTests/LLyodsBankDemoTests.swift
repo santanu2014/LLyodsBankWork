@@ -27,18 +27,22 @@ class LLyodsBankDemoTests: XCTestCase {
     func testHasATableView() {
         XCTAssertNotNil(landingViewControllerTest.newsTableView)
      }
+    //Test tableview delegate
     func testTableViewHasDelegate() {
             XCTAssertNotNil(landingViewControllerTest.newsTableView.delegate)
         }
+    //test table view data source
     func testTableViewHasDataSource() {
             XCTAssertNotNil(landingViewControllerTest.newsTableView.dataSource)
         }
+    //Test delegate methods
     func testTableViewConformsToTableViewDataSourceProtocol() {
             XCTAssertTrue(landingViewControllerTest.conforms(to: UITableViewDataSource.self))
             XCTAssertTrue(landingViewControllerTest.responds(to: #selector(landingViewControllerTest.numberOfSections(in:))))
             XCTAssertTrue(landingViewControllerTest.responds(to: #selector(landingViewControllerTest.tableView(_:numberOfRowsInSection:))))
             XCTAssertTrue(landingViewControllerTest.responds(to: #selector(landingViewControllerTest.tableView(_:cellForRowAt:))))
         }
+    //Test identifier name
     func testTableViewCellHasReuseIdentifier() {
             let cell = landingViewControllerTest.tableView(landingViewControllerTest.newsTableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? NewsTableViewCell
             let actualReuseIdentifer = cell?.reuseIdentifier
@@ -53,6 +57,7 @@ class LLyodsBankDemoTests: XCTestCase {
           XCTAssertEqual(numberOfRow, 3, "Number of rows in tableview should match with three")
 
        }
+    //Test table cell
     func testTableCellHasCorrectLabelText() {
             let testData = FileDataService.shared.fetchConverter(filename: "TestingData")
             landingViewControllerTest.viewModel.newsResult = testData

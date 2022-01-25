@@ -34,7 +34,7 @@ API use for this app:
                apiKey: Register API key
             
 App workflow: First you have to generate API key from https://newsapi.org/ site. After using this API key, the API will return list of articles in json             format. I have pursed the data using codable protocol and generate array of articles for data source.
-
+              
               This app will show today news for UK in tableview, each cell content different news with thumbnail image, news Title, Shot description and news sources.
               
               When app launch, loading indicator will appear and app calling web get API

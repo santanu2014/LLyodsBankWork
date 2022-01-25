@@ -41,6 +41,7 @@ App workflow: This app will show today news for UK in tableview, each cell conte
               in json format. I have pursed the data using codable protocol and generate array of articles for data source.
             
               * App also support for iPhone and iPad.
+              * Pull to refresh option also available.
               * Also different orientation.
               * Light / Dark mode.
               * Unit test cases.

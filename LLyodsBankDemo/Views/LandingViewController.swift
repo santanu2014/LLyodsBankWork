@@ -31,14 +31,15 @@ class LandingViewController: UIViewController {
         //Call API service
         callAPI()
     }
-    /// Pull to Refresh Action
+    //MARK: - Pull to Refresh Action
     /// - Parameter sender: Refresh Action
     @objc func refresh(_ sender: AnyObject) {
        // Code to refresh tableView
         self.callAPI()
     }
+    //MARK:- Calling web api
     func callAPI() {
-        //User has to pass city/place/country name, API will return coresponding current day news.
+        //MARK: - User has to pass city/place/country name, API will return coresponding current day news.
         viewModel.getNewsList(locationName: "UK") { response, status in
             self.view.activityStopAnimating()
             self.refreshControl.endRefreshing()
@@ -53,7 +54,7 @@ class LandingViewController: UIViewController {
 
 }
 
-//Deleagte for tableview
+//MARK: - Deleagte for tableview
 extension LandingViewController: UITableViewDelegate {}
 extension LandingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

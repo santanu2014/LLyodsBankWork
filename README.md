@@ -14,15 +14,13 @@ This project is written in Swift 5.0 and requires Xcode 13.1 to build and run.
 Cloning an existing repository in  Desktop
 
 cd ~/Desktop
-  git clone https://github.com/santanu2014/LLyodsBankWork.git
+    git clone https://github.com/santanu2014/LLyodsBankWork.git
 
 Open the workspace in Xcode
 
-Go the the LLyodsBankWork folder then 
+    $ cd LLyodsBankWork
 
-$ cd LLyodsBankWork
-
-$ open "LLyodsBankDemo.xcodeproj"
+    $ open "LLyodsBankDemo.xcodeproj"
 
 App information:
 

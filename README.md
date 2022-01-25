@@ -33,16 +33,17 @@ API use for this app:
                sortBy: publishedAt
                apiKey: Register API key
             
-App workflow: This app will show today news for UK in tableview, each cell content different news. Cell content is thumbnail image,               News Title, Shot description and news sources. 
-              First you have to generate API key from https://newsapi.org/ site.
-              When app lunches loading indicator will appear and app calling web get API
-              with few parameter like current date, news location name like city name or
-              country or particular place name and API key. Web API will return list of article
-              in json format. I have pursed the data using codable protocol and generate array of articles for data source.
-            
-              * App also support for iPhone and iPad.
+App workflow: First you have to generate API key from https://newsapi.org/ site. After using this API key, the API will return list of articles in json             format. I have pursed the data using codable protocol and generate array of articles for data source.
+
+              This app will show today news for UK in tableview, each cell content different news with thumbnail image, news Title, Shot description and news sources.
+              
+              When app launch, loading indicator will appear and app calling web get API
+              with few parameters like current date, news location name (like city name or
+              country or particular place name) and API key. 
+          
+              * App also support iPhone and iPad.
               * Pull to refresh option also available.
-              * Also different orientation.
+              * Support different orientation.
               * Light / Dark mode.
               * Unit test cases.
               * UI test cases.

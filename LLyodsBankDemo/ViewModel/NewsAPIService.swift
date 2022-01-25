@@ -8,10 +8,13 @@
 import Foundation
 import Alamofire
 
+//MARK: - Success block
 typealias SuccessBlock =  (_ response: AnyObject?, _ status: Int) -> Void
+//MARK: - Failure block
 typealias FailureBlock = (_ response: AnyObject?) -> Void
 
  class NewsAPIService {
+    //MARK: - crete share instance
     static let shareViewModel = NewsAPIService()
     var newsResult: NewsResult?
      
@@ -39,7 +42,7 @@ typealias FailureBlock = (_ response: AnyObject?) -> Void
      
      /// Get current date
      /// - Returns: date in string format
-     func getTodayDate() -> String {
+     private func getTodayDate() -> String {
          // create dateFormatter with UTC time format
          let dateFormatter = DateFormatter()
          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"

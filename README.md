@@ -18,8 +18,6 @@ Cloning an existing repository in  Desktop
 
 Open the workspace in Xcode
 
-Go the the LLyodsBankWork folder then 
-
     $ cd LLyodsBankWork
 
     $ open "LLyodsBankDemo.xcodeproj"

@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-final class HTTPManager {
+class HTTPManager {
     /// Calling backend web service
     /// - Parameters:
     ///   - url: url

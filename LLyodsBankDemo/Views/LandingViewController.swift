@@ -8,8 +8,7 @@
 import UIKit
 import Alamofire
 
-class LandingViewController: UIViewController {
-
+class LandingViewController: UIViewController, HttpResponseDelegate {
     @IBOutlet weak var newsTableView: UITableView!
     private var refreshControl = UIRefreshControl()
     //Initiated View Model
@@ -20,6 +19,12 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configUI()
+        //Call API service
+        callAPI()
+    }
+    //MARK: - Design the UI
+    func configUI() {
         newsTableView.accessibilityLabel = "newsTableView"
         //Add pull to refresh Action
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -28,28 +33,31 @@ class LandingViewController: UIViewController {
         refreshControl.attributedTitle = loadingtitke
         newsTableView.addSubview(refreshControl)
         self.view.activityStartAnimating(activityColor: UIColor.gray, backgroundColor: .secondarySystemBackground, titleName: TextConstant.loadingData)
-        //Call API service
-        callAPI()
     }
     //MARK: - Pull to Refresh Action
     /// - Parameter sender: Refresh Action
     @objc func refresh(_ sender: AnyObject) {
-       // Code to refresh tableView
         self.callAPI()
+    }
+    
+    /// Callback method for API call
+    /// - Parameters:
+    ///   - success: true / false will return based on succes for failure
+    ///   - meassage: "In case error happen"
+    func endPointResponseFor(success: Bool, meassage: String) {
+        self.view.activityStopAnimating()
+        self.refreshControl.endRefreshing()
+        if success == true {
+            self.newsTableView.reloadData()
+        } else {
+            showAlert(withTitle: "Title", withMessage: meassage)
+        }
     }
     //MARK:- Calling web api
     func callAPI() {
         //MARK: - User has to pass city/place/country name, API will return coresponding current day news.
-        viewModel.getNewsList(locationName: "UK") { response, status in
-            self.view.activityStopAnimating()
-            self.refreshControl.endRefreshing()
-            DispatchQueue.main.async {
-                self.newsTableView.reloadData()
-            }
-        } failureBlock: { response in
-            self.view.activityStopAnimating()
-            self.refreshControl.endRefreshing()
-        }
+        viewModel.delegate = self
+        viewModel.getNewsList(locationName: "UK")
     }
 
 }

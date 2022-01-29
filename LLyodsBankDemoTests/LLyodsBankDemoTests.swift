@@ -72,6 +72,10 @@ class LLyodsBankDemoTests: XCTestCase {
         landingViewControllerTest.callAPI()
         landingViewControllerTest.refresh(UIButton())
     }
+    func testEendPointResponseForSuccess() {
+        landingViewControllerTest.endPointResponseFor(success: true, meassage: "success")
+        landingViewControllerTest.endPointResponseFor(success: false, meassage: "failure")
+    }
 }
 //Cretae Mock data for unit test
 extension FileManager {

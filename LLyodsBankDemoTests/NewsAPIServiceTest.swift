@@ -19,7 +19,7 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         apiServiceTest.delegate = self
     }
-    //Test API calling method
+    //Test API calling get method for success
     func testGetNewsListSuccess() {
         expectation  = expectation(description: "Get true response")
         //Test case : when getting success response
@@ -29,8 +29,8 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(responseStatus, true)
     }
+    //Test case : when getting failure response
     func testGetNewsListFailure() {
-        //Test case : when getting failure response
         expectation  = expectation(description: "Get false response")
         let mockobjFail = HTTPManagerMockForFailure()
         apiServiceTest.objHTTPManager = mockobjFail
@@ -38,8 +38,8 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(responseStatus, false)
     }
+    //Test case : when getting nil response
     func testGetNewsListNil(){
-        //Test case : when getting nil response
         expectation  = expectation(description: "Get Nil response")
         let mockobjNil = HTTPManagerMockForNil()
         apiServiceTest.objHTTPManager = mockobjNil
@@ -47,8 +47,8 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(responseStatus, false)
     }
+    //Test case : when getting server error response
     func testGetNewsListAPIeEror() {
-        //Test case : when getting server error response
         expectation  = expectation(description: "Get Server Failure")
         let mockobjError = HTTPManagerMockForServerFailure()
         apiServiceTest.objHTTPManager = mockobjError
@@ -56,6 +56,7 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         waitForExpectations(timeout: 1, handler: nil)
         XCTAssertEqual(responseStatus, false)
     }
+    //Validate today date in string format.
     func testGetTodayDate() {
         let date = apiServiceTest.getTodayDate()
         XCTAssert(date.count > 0 , "Current date succesfully converted to string format")

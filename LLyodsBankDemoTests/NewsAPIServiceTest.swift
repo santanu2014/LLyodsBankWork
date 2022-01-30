@@ -23,25 +23,25 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         let mockobj = HTTPManagerMockForSucces()
         apiServiceTest.objHTTPManager = mockobj
         apiServiceTest.getNewsList(locationName: "UK")
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
 
         //Test case : when getting failure response
         let mockobjFail = HTTPManagerMockForFailure()
         apiServiceTest.objHTTPManager = mockobjFail
         apiServiceTest.getNewsList(locationName: "UK")
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
 
         //Test case : when getting nil response
         let mockobjNil = HTTPManagerMockForNil()
         apiServiceTest.objHTTPManager = mockobjNil
         apiServiceTest.getNewsList(locationName: "UK")
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
         
         //Test case : when getting server error response
-        let mockobjError = HTTPManagerMockForFailureBlock()
+        let mockobjError = HTTPManagerMockForServerFailure()
         apiServiceTest.objHTTPManager = mockobjError
         apiServiceTest.getNewsList(locationName: "UK")
-        waitForExpectations(timeout: 2, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     func testGetTodayDate() {
         let date = apiServiceTest.getTodayDate()
@@ -79,7 +79,7 @@ class HTTPManagerMockForNil: HTTPManager {
     }
 }
 //Mock data for HTTPManager
-class HTTPManagerMockForFailureBlock: HTTPManager {
+class HTTPManagerMockForServerFailure: HTTPManager {
     override func performMethod(UrlString url: String, body: [String : Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod?, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
         let  error = NSError.self
         failureBlock?(error)

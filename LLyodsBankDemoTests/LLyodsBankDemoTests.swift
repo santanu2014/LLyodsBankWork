@@ -73,11 +73,12 @@ class LLyodsBankDemoTests: XCTestCase {
         landingViewControllerTest.refresh(UIButton())
     }
     func testEendPointResponseForSuccess() {
-        landingViewControllerTest.endPointResponseFor(success: true, meassage: "success")
-        landingViewControllerTest.endPointResponseFor(success: false, meassage: "failure")
+        landingViewControllerTest.endPointResponseFor(isSuccess: true, meassage: "success")
+        landingViewControllerTest.endPointResponseFor(isSuccess: false, meassage: "failure")
     }
 }
-//Cretae Mock data for unit test
+
+//Create Mock data for unit test cases. Load json file from bundle.
 extension FileManager {
     static func readJson(forResource fileName: String ) -> Data? {
         let bundle = Bundle(for: FileDataService.self)
@@ -92,7 +93,7 @@ extension FileManager {
         return nil
     }
 }
-
+//Create Mock data for unit test cases. Load json file from bundle.
 final class FileDataService {
     static let shared = FileDataService()
     func fetchConverter(filename: String) -> NewsResult? {

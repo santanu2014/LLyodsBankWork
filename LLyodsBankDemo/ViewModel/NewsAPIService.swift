@@ -14,7 +14,7 @@ typealias SuccessBlock =  (_ response: AnyObject?, _ status: Int) -> Void
 typealias FailureBlock = (_ response: AnyObject?) -> Void
 
 protocol HttpResponseDelegate: AnyObject {
-    func endPointResponseFor(success: Bool, meassage: String)
+    func endPointResponseFor(isSuccess: Bool, meassage: String)
 }
  class NewsAPIService {
     //MARK: - crete share instance
@@ -32,18 +32,18 @@ protocol HttpResponseDelegate: AnyObject {
          let urlString = String(format: APIConstants.apiURL,locationName,getTodayDate(),APIInfo.APIKey)
          objHTTPManager.performMethod(UrlString: urlString, body: nil, Parameter: headers, MethodName: .get) { (response, status) in
              guard let response = response as? NSData else {
-                 self.delegate?.endPointResponseFor(success: false, meassage: "failure")
+                 self.delegate?.endPointResponseFor(isSuccess: false, meassage: "failure")
                  return
              }
              do {
                  let decoder = JSONDecoder()
                  self.newsResult = try decoder.decode(NewsResult.self, from: response as Data)
-                 self.delegate?.endPointResponseFor(success: true, meassage: "success")
+                 self.delegate?.endPointResponseFor(isSuccess: true, meassage: "success")
              } catch  _ as NSError {
-                 self.delegate?.endPointResponseFor(success: false, meassage: "failure")
+                 self.delegate?.endPointResponseFor(isSuccess: false, meassage: "failure")
              }
          } failureBlock: { (response) in
-             self.delegate?.endPointResponseFor(success: false, meassage: "failure")
+             self.delegate?.endPointResponseFor(isSuccess: false, meassage: "failure")
          }
      }
      

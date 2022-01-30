@@ -44,10 +44,10 @@ class LandingViewController: UIViewController, HttpResponseDelegate {
     /// - Parameters:
     ///   - success: true / false will return based on succes for failure
     ///   - meassage: "In case error happen"
-    func endPointResponseFor(success: Bool, meassage: String) {
+    func endPointResponseFor(isSuccess: Bool, meassage: String) {
         self.view.activityStopAnimating()
         self.refreshControl.endRefreshing()
-        if success == true {
+        if isSuccess == true {
             self.newsTableView.reloadData()
         } else {
             showAlert(withTitle: TextConstant.title, withMessage: meassage)

@@ -25,7 +25,7 @@ class NewsTableViewCell: UITableViewCell {
     func populateCellContent(articles: Articles) {
         newsTitle.text = articles.title
         newsDescription.text = articles.description
-        if let sourceName =  articles.source?.name { sourceLabel.text = "Source: " + sourceName }
+        if let sourceName =  articles.source?.name { sourceLabel.text = TextConstant.source + sourceName }
         if let url = articles.urlToImage {
             let imageURL = url.replacingOccurrences(of: " ", with: "%20")
             AF.request(imageURL, method: .get).response { response in

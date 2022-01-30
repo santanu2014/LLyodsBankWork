@@ -50,7 +50,7 @@ class LandingViewController: UIViewController, HttpResponseDelegate {
         if success == true {
             self.newsTableView.reloadData()
         } else {
-            showAlert(withTitle: "Title", withMessage: meassage)
+            showAlert(withTitle: TextConstant.title, withMessage: meassage)
         }
     }
     //MARK:- Calling web api

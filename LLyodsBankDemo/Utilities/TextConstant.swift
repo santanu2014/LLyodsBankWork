@@ -9,4 +9,6 @@ import Foundation
 
 struct TextConstant {
     static let loadingData = "Loading Data..."
+    static let source = "Source: "
+    static let title = "Title"
 }

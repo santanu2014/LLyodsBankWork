@@ -26,10 +26,10 @@ protocol HttpResponseDelegate: AnyObject {
      /// - Parameters:
      ///   - locationName: locationName  / City name
      ///   - successBlock: successBlock
-     ///   - failureBlock: failureBlock 
+     ///   - failureBlock: failureBlock
      func getNewsList(locationName: String) {
          let headers: HTTPHeaders = []
-         let urlString = String(format: APIConstants.apiURL,locationName,getTodayDate())
+         let urlString = String(format: APIConstants.apiURL,locationName,getTodayDate(),APIInfo.APIKey)
          objHTTPManager.performMethod(UrlString: urlString, body: nil, Parameter: headers, MethodName: .get) { (response, status) in
              guard let response = response as? NSData else {
                  self.delegate?.endPointResponseFor(success: false, meassage: "failure")

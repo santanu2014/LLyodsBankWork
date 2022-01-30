@@ -17,7 +17,7 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     //Test API calling method
-    func testGetNews() {
+    func testGetNewsList() {
         apiServiceTest.delegate = self
         //Test case : when getting success response
         let mockobj = HTTPManagerMockForSucces()

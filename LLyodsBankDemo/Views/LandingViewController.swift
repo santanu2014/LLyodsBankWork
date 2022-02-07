@@ -43,14 +43,14 @@ class LandingViewController: UIViewController, HttpResponseDelegate {
     /// Callback method for API call
     /// - Parameters:
     ///   - success: true / false will return based on succes for failure
-    ///   - meassage: "In case error happen"
-    func endPointResponseFor(isSuccess: Bool, meassage: String) {
+    ///   - message: "In case error happen"
+    func endPointResponseFor(isSuccess: Bool, message: String) {
         self.view.activityStopAnimating()
         self.refreshControl.endRefreshing()
         if isSuccess == true {
             self.newsTableView.reloadData()
         } else {
-            showAlert(withTitle: TextConstant.title, withMessage: meassage)
+            showAlert(withTitle: TextConstant.title, withMessage: message)
         }
     }
     //MARK:- Calling web api
@@ -69,7 +69,7 @@ extension LandingViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as! NewsTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as? NewsTableViewCell else { return UITableViewCell() }
         //Adding first cell accessibilityValue for UI testing
         if indexPath.row == 0 { cell.accessibilityValue = "NewsTableViewCell_forCell_0_Index" }
         guard let article = viewModel.newsResult?.articles?[indexPath.row] else {

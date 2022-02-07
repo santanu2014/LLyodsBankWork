@@ -17,19 +17,20 @@ class HTTPManager {
     ///   - method: method
     ///   - successBlock: successBlock
     ///   - failureBlock: failureBlock 
-    func performMethod(UrlString url: String, body: [String: Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod?, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
+    func performMethod(UrlString url: String, body: [String: Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
         if let urlName = URL(string: url) {
             var urlRequest = URLRequest(url: urlName)
             urlRequest.timeoutInterval =  30
-            urlRequest.httpMethod = method?.rawValue
+            urlRequest.httpMethod = method.rawValue
                 if Connectivity.isConnectedToInternet() == false {
                     failureBlock?(nil)
                 }
-                AF.request(url, method: HTTPMethod(rawValue: method!.rawValue), parameters: body, encoding: JSONEncoding.default, headers: headers).responseData { response in
+                AF.request(url, method: HTTPMethod(rawValue: method.rawValue), parameters: body, encoding: JSONEncoding.default, headers: headers).responseData { response in
                     switch response.result {
                     case .success(let jason):
                         if jason.isEmpty { return }
-                        successBlock?(response.data as AnyObject?, response.response!.statusCode)
+                        guard let code = response.response?.statusCode else { return }
+                        successBlock?(response.data as AnyObject?, code)
                     case .failure(let error as NSError):
                         failureBlock?(error)
                     }

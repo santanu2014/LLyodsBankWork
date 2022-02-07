@@ -62,7 +62,7 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
         XCTAssert(date.count > 0 , "Current date succesfully converted to string format")
     }
     //Call back methods for delegate
-    func endPointResponseFor(isSuccess: Bool, meassage: String) {
+    func endPointResponseFor(isSuccess: Bool, message: String) {
         responseStatus = isSuccess
         expectation?.fulfill()
         expectation = nil
@@ -75,22 +75,22 @@ class NewsAPIServiceTest: XCTestCase,HttpResponseDelegate {
 //Mock data for HTTPManager Succes
 class HTTPManagerMockForSucces: HTTPManager {
     override func performMethod(UrlString url: String, body: [String : Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod?, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
-        let data = FileManager.readJson(forResource: "TestingData")
-        successBlock!(data as AnyObject, 200)
+        guard let data = FileManager.readJson(forResource: "TestingData") else { return }
+        successBlock?(data as AnyObject, 200)
     }
 }
 //Mock data for HTTPManager Failure
 class HTTPManagerMockForFailure: HTTPManager {
     override func performMethod(UrlString url: String, body: [String : Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod?, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
         let data = NSData()
-        successBlock!(data as AnyObject, 201)
+        successBlock?(data as AnyObject, 201)
     }
 }
 //Mock data for HTTPManager Nil
 class HTTPManagerMockForNil: HTTPManager {
     override func performMethod(UrlString url: String, body: [String : Any]?, Parameter headers: HTTPHeaders?, MethodName method: HTTPMethod?, successBlock: SuccessBlock?, failureBlock: FailureBlock?) {
         let data = FileDataService.shared.fetchConverter(filename: "TestingData")
-        successBlock!(data as AnyObject, 201)
+        successBlock?(data as AnyObject, 201)
     }
 }
 //Mock data for HTTPManager Server Failure

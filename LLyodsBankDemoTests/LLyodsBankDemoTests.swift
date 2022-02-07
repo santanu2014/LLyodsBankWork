@@ -53,7 +53,8 @@ class LLyodsBankDemoTests: XCTestCase {
     func testNumberofRowofTableView() {
         let testData = FileDataService.shared.fetchConverter(filename: "TestingData")
         landingViewControllerTest.viewModel.newsResult = testData
-        let numberOfRow = landingViewControllerTest?.tableView((landingViewControllerTest?.newsTableView)!, numberOfRowsInSection: 0)
+        guard let tableView = landingViewControllerTest?.newsTableView else { return }
+        let numberOfRow = landingViewControllerTest?.tableView(tableView, numberOfRowsInSection: 0)
           XCTAssertEqual(numberOfRow, 3, "Number of rows in tableview should match with three")
 
        }
@@ -73,8 +74,8 @@ class LLyodsBankDemoTests: XCTestCase {
         landingViewControllerTest.refresh(UIButton())
     }
     func testEendPointResponseForSuccess() {
-        landingViewControllerTest.endPointResponseFor(isSuccess: true, meassage: "success")
-        landingViewControllerTest.endPointResponseFor(isSuccess: false, meassage: "failure")
+        landingViewControllerTest.endPointResponseFor(isSuccess: true, message: "success")
+        landingViewControllerTest.endPointResponseFor(isSuccess: false, message: "failure")
     }
 }
 
